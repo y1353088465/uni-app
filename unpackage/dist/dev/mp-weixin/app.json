@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/next/next",
+    "pages/index/wx_chat/wx_chat",
+    "pages/index/wx_contacts/wx_contacts",
+    "pages/index/wx_find/wx_find",
+    "pages/index/wx_my/wx_my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {}
+}

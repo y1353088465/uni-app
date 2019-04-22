@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+page,
+page,
+._div,
+form,
+._p,
+._ul,
+._li,
+._h1,
+._h2,
+._h3,
+._h4,
+._h5,
+._h6,
+._img,
+input,
+textarea,
+._table,
+._tr,
+._td,
+._ol,
+._dl,
+._dd,
+._dt {
+	margin: 0;
+	padding: 0;
+}
+._ul,
+._ol,
+._dl {
+	list-style: none;
+}
+._a {
+	text-decoration: none;
+	border: none;
+}
+input,
+textarea,
+button {
+	outline: none;
+}
+
+

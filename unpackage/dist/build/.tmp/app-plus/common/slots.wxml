@@ -1,0 +1,8 @@
+<import src="/components/fog.vue.wxml" />
+<import src="/pages/index/wx_chat/wx_chat.vue.wxml" />
+<import src="/pages/index/wx_contacts/wx_contacts.vue.wxml" />
+<import src="/pages/index/wx_find/wx_find.vue.wxml" />
+<import src="/pages/index/wx_my/wx_my.vue.wxml" />
+<import src="/components/index_header.vue.wxml" />
+<import src="/components/menu_list.vue.wxml" />
+

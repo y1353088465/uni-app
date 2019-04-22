@@ -1,0 +1,1 @@
+<template name="69271838"><view wx:if="{{fog_status}}" class="_view data-v-12531f90 fog"></view></template>
