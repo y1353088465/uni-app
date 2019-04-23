@@ -46,6 +46,7 @@
 		},
 		watch: {
 			obj() {
+				
 				console.log(11000)
 			}
 		},
