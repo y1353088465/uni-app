@@ -1,6 +1,6 @@
 <template>
 	<view class="wx_chat">
-		<IndexHeader v-on:menu_status="menu_status" msg="微微信"></IndexHeader>
+		<IndexHeader v-on:menu_status="menu_status" msg="123"></IndexHeader>
 		<div class="scroll-Y">
 			<view @click="chat_with_friend()" v-for="i in chat_list" id="demo1" class="scroll-view-item uni-bg-red">
 				<img src="../../../static/logo.png" alt="">
@@ -31,15 +31,16 @@
 					scrollTop: 0
 				},
 				chat_list: [{
-					title:"大型公共聊天室",
-					text:"websocket",
-					time:"13.01"
-				},
-				 {
-				 	title:"同服务器交流群",
-				 	text:"进入de聊天室是相同的一个",
-				 	time:"13.08"
-				 }, ],
+						title: "修炼室",
+						text: "websocket",
+						time: "13.01"
+					},
+					{
+						title: "演武室",
+						text: "进入de",
+						time: "13.08"
+					},
+				],
 				menu_list_status: false,
 			};
 		},
@@ -65,6 +66,24 @@
 					complete: () => {}
 				});
 			}
+		},
+		mounted() {
+			uni.request({
+				url: 'http://192.168.118.140:1100/post', 
+				method: 'POST',
+				data: {
+					"phone": 10086
+				},
+				header: {
+					"Content-Type": 'application/application/x-www-form-urlencoded',
+				},
+				success: (data) => {
+					console.log(data);
+				},
+				fail: (err) => {
+					console.log(JSON.stringify(err))
+				}
+			});
 		}
 	}
 </script>
