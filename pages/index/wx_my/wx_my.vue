@@ -1,6 +1,6 @@
 <template>
 	<view class="wx_my">
-		4
+		{{userName}}
 	</view>
 </template>
 
@@ -10,7 +10,8 @@
 			return {
 				
 			};
-		}
+		},
+		props:["userName"]
 	}
 </script>
 
