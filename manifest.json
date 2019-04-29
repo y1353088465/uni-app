@@ -94,14 +94,15 @@
         }
     },
     "h5" : {
-        "devServer": {
-            "port": 8080,
-            "disableHostCheck": true,
-            "proxy": {
-                "/": {
-                    "target": "http://192.168.118.140:1100",
-                    "changeOrigin": true,
-                    "secure": false
+        "devServer" : {
+            "port" : 8080,
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/" : {
+                    "target" : "http://192.168.118.140:1100",
+                    "ws" : false,
+                    "changeOrigin" : true,
+                    "secure" : false
                 }
             }
         }

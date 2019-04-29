@@ -25,16 +25,22 @@
 						key: 'user_name',
 						data: this.user_name,
 						success: (res) => {
-							console.log(res);
 							this.send_info();
+
+							console.log(JSON.stringify(res));
+
+						},
+						error: (err) => {
+							console.log(err)
 						}
 					});
 				}
 			},
 			send_info() {
-				
+				console.log("发送请求")
+
 				uni.request({
-					url: '/login_in', //仅为示例，并非真实接口地址。
+					url: 'http://192.168.118.140:1100/login_in', //仅为示例，并非真实接口地址。
 					method: 'GET',
 					data: {
 						phone: this.user_name
@@ -53,13 +59,68 @@
 								fail: () => {},
 								complete: () => {}
 							});
-						}else{
-							alert(data.data.data.data)
+						} else {
+							uni.showToast({
+								title: data.data.data.data,
+								icon:false,
+								duration: 2000
+							});
 						}
 
+					},
+					fail: (err) => {
+						console.log(JSON.stringify(err))
 					}
 				});
 			}
+		},
+		onLoad() {
+			uni.getStorage({
+				key: 'user_name',
+
+				success: (res) => {
+					uni.navigateTo({
+						url: '/pages/index/index',
+						animationType: 'pop-in',
+						animationDuration: 400,
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+					console.log(res);
+				},
+				fail: (res) => {
+
+					console.log(JSON.stringify(res))
+				}
+			});
+		},
+		beforeDestroy() {
+			uni.getStorage({
+				key: 'user_name',
+				success: (res) => {
+					uni.navigateTo({
+						url: '/pages/index/index',
+						animationType: 'pop-in',
+						animationDuration: 400,
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+					console.log(res);
+				},
+				fail: (res) => {
+					uni.navigateTo({
+						url: '/pages/login/login',
+						animationType: 'pop-in',
+						animationDuration: 400,
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+					console.log(res)
+				}
+			});
 		}
 	}
 </script>
@@ -68,6 +129,7 @@
 	.login {
 		width: 100%;
 		height: 100vh;
+		min-height: 1000upx;
 		background: linear-gradient(left top, #2468ac 10%, rgba(0, 0, 0, .8) 50%, #789ac9 100%);
 		display: flex;
 		flex-direction: column;

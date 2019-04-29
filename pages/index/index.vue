@@ -6,7 +6,7 @@
 		<Chat v-if="child_page_num === 0"></Chat>
 		<Contacts v-else-if="child_page_num === 1"></Contacts>
 		<Find v-else-if="child_page_num === 2"></Find>
-		<My v-else-if="child_page_num === 3"></My>
+		<My :userName="userName" v-else-if="child_page_num === 3"></My>
 		<div class="bottom_btn_box">
 			<div v-for="(i,j) in btn_list" :class="i.active_div" @click="child_page_change(j)" hover-class="navigator-hover">
 				<span class="iconfont" v-html="i.icon"></span>
@@ -28,6 +28,7 @@
 				title: 'Hello',
 				child_page_num: 0,
 				active_div: "active_div",
+				userName:'',
 				btn_list: [{
 						text: "微信",
 						icon: "&#xe715;",
@@ -65,6 +66,24 @@
 				})
 				this.btn_list[a].active_div = "active_div";
 			}
+		},
+		mounted() {
+			uni.getStorage({
+				key: 'user_name',
+				success: (res) => {
+					this.userName = res.data
+				},
+				fail: () => {
+					uni.navigateTo({
+						url: '/pages/login/login',
+						animationType: 'pop-in',
+						animationDuration: 400,
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				}
+			});
 		}
 	}
 </script>

@@ -9,7 +9,7 @@
 			<p></p>
 		</view>
 		<view class="chat_history">
-			<view v-for="i in data_list">
+			<view :key="k" v-for="(i,k) in data_list">
 				<p v-if='i.text'>{{i.name}}： {{i.text}}</p>
 				<p v-if='!i.text'>{{i.name}}加入聊天室</p>
 			</view>
@@ -49,42 +49,39 @@
 				console.log(11000)
 			}
 		},
-		mounted() {
-
+		onLoad() {
 			uni.getStorage({
 				key: 'user_name',
 				success: (res) => {
-					if (res.data) {
-						this.obj.user_name = res.data;
-						// 新建websocket
-						this.socketConnect()
-						this.socketOpen()
-						this.socketClose()
-						this.socketError()
-						this.socketMessage()
-					}else{
-						uni.navigateTo({
-							url: '/pages/login/login',
-							animationType: 'pop-in',
-							animationDuration: 400,
-							success: res => {},
-							fail: () => {},
-							complete: () => {}
-						});
-					}
+					this.obj.user_name = res.data;
+					this.obj.inp_msg = '';
+					// 新建websocket
+					console.log(this.obj)
+					this.socketConnect()
+					this.socketOpen()
+					this.socketError()
+					this.socketMessage()
+				},
+				fail: () => {
+					uni.navigateTo({
+						url: '/pages/login/login',
+						animationType: 'pop-in',
+						animationDuration: 400,
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
 				}
 			});
-
-
-
 		},
 		beforeDestroy() {
-			uni.removeStorage({
-				key: 'obj',
-				success: function(res) {
-					console.log('success');
-				}
-			});
+			// uni.removeStorage({
+			// 	key: 'user_name',
+			// 	success: (res) =>{}
+			// })
+			console.log("close")
+			// this.socketConnect()
+			this.socketClose()
 		},
 		methods: {
 			// websocket-----------------------------------------------
@@ -110,6 +107,7 @@
 				}
 			},
 			socketClose() {
+				uni.closeSocket();
 				uni.onSocketClose((res) => {
 					console.log('WebSocket 已关闭！');
 				});
