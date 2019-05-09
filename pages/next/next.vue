@@ -46,7 +46,7 @@
 		},
 		watch: {
 			obj() {
-				
+
 				console.log(11000)
 			}
 		},
@@ -74,6 +74,22 @@
 					});
 				}
 			});
+		},
+		mounted() {
+			let inp = document.getElementById("send_btn");
+			inp.onmousedown = function(e) {
+				inp.focus()
+				// 				e.preventDefault();
+				// 				e.stopPropagation();
+				// 				e.cancelBubble = true;
+				if (e && e.preventDefault)
+					e.preventDefault();
+				//IE阻止默认事件
+				else
+					window.event.returnValue = false;
+				return false;
+			}
+
 		},
 		beforeDestroy() {
 			// uni.removeStorage({
@@ -134,17 +150,7 @@
 				});
 			},
 			send(e) {
-				let inp = document.getElementById("send_btn");
-				inp.focus()
-				// 				e.preventDefault();
-				// 				e.stopPropagation();
-				// 				e.cancelBubble = true;
-				if (e && e.preventDefault)
-					e.preventDefault();
-				//IE阻止默认事件
-				else
-					window.event.returnValue = false;
-				return false;
+
 			},
 			send_msg(e) {
 				if (this.obj.inp_msg) {

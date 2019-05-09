@@ -74,10 +74,9 @@
 				});
 			}
 		},
-		onLoad() {
+		mounted() {
 			uni.getStorage({
 				key: 'user_name',
-
 				success: (res) => {
 					uni.navigateTo({
 						url: '/pages/index/index',
