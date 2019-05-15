@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/index/index",
+    "pages/login/login",
     "pages/next/next",
-    "pages/index/wx_search/wx_search"
+    "pages/index/wx_search/wx_search",
+    "pages/webView/webView"
   ],
   "subPackages": [],
   "window": {
@@ -19,5 +20,5 @@
     "autoclose": false
   },
   "appname": "微微信",
-  "compilerVersion": "1.9.2"
+  "compilerVersion": "1.9.4"
 }

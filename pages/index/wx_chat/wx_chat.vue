@@ -68,22 +68,22 @@
 			}
 		},
 		mounted() {
-			uni.request({
-				url: 'http://192.168.118.140:1100/post', 
-				method: 'POST',
-				data: {
-					"phone": 10086
-				},
-				header: {
-					"Content-Type": 'application/application/x-www-form-urlencoded',
-				},
-				success: (data) => {
-					console.log(data);
-				},
-				fail: (err) => {
-					console.log(JSON.stringify(err))
-				}
-			});
+			// uni.request({
+			// 	url: 'http://192.168.118.140:1100/post', 
+			// 	method: 'POST',
+			// 	data: {
+			// 		"phone": 10086
+			// 	},
+			// 	header: {
+			// 		"Content-Type": 'application/application/x-www-form-urlencoded',
+			// 	},
+			// 	success: (data) => {
+			// 		console.log(data);
+			// 	},
+			// 	fail: (err) => {
+			// 		console.log(JSON.stringify(err))
+			// 	}
+			// });
 		}
 	}
 </script>

@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.chat_page.data-v-1581ba5a {
+.chat_page.data-v-0d3f0b50 {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -38,12 +38,12 @@
           flex-direction: column;
   position: relative;
 }
-.chat_page .status_bar.data-v-1581ba5a {
+.chat_page .status_bar.data-v-0d3f0b50 {
     height: var(--status-bar-height);
     width: 100%;
     background-color: #F8F8F8;
 }
-.chat_page .top_view.data-v-1581ba5a {
+.chat_page .top_view.data-v-0d3f0b50 {
     height: var(--status-bar-height);
     width: 100%;
     position: fixed;
@@ -51,7 +51,7 @@
     top: 0;
     z-index: 999;
 }
-.chat_page .set_name.data-v-1581ba5a {
+.chat_page .set_name.data-v-0d3f0b50 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -66,12 +66,12 @@
             box-shadow: 0rpx 0rpx 15rpx #666;
     z-index: 2;
 }
-.chat_page .set_name input.data-v-1581ba5a {
+.chat_page .set_name input.data-v-0d3f0b50 {
       width: 500rpx;
       height: 80rpx;
       border-bottom: 1px solid #ccc;
 }
-.chat_page .set_name ._p.data-v-1581ba5a {
+.chat_page .set_name ._p.data-v-0d3f0b50 {
       width: 100%;
       line-height: 80rpx;
       background: #59ef79;
@@ -80,7 +80,7 @@
       margin-top: 25rpx;
       border-radius: 7rpx;
 }
-.chat_page .header.data-v-1581ba5a {
+.chat_page .header.data-v-0d3f0b50 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -103,11 +103,11 @@
     border-bottom: 1px solid #eee;
     background: #eee;
 }
-.chat_page .header ._p.data-v-1581ba5a {
+.chat_page .header ._p.data-v-0d3f0b50 {
       width: 80rpx;
       font-size: 28rpx;
 }
-.chat_page .header ._p.data-v-1581ba5a:nth-child(2) {
+.chat_page .header ._p.data-v-0d3f0b50:nth-child(2) {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
           -ms-flex: 1;
@@ -115,7 +115,7 @@
       text-align: center;
       font-size: 30rpx;
 }
-.chat_page .chat_history.data-v-1581ba5a {
+.chat_page .chat_history.data-v-0d3f0b50 {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -125,10 +125,10 @@
     line-height: 60rpx;
     background: #fff;
 }
-.chat_page .chat_history ._p.data-v-1581ba5a {
+.chat_page .chat_history ._p.data-v-0d3f0b50 {
       font-size: 28rpx;
 }
-.chat_page .input_box.data-v-1581ba5a {
+.chat_page .input_box.data-v-0d3f0b50 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -146,7 +146,7 @@
     background: #eee;
     padding: 0 20rpx;
 }
-.chat_page .input_box input.data-v-1581ba5a {
+.chat_page .input_box input.data-v-0d3f0b50 {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
           -ms-flex: 1;
@@ -156,7 +156,7 @@
       height: 60rpx;
       border-radius: 10rpx;
 }
-.chat_page .input_box ._p.data-v-1581ba5a {
+.chat_page .input_box ._p.data-v-0d3f0b50 {
       width: 150rpx;
       height: 60rpx;
       background: #efefef;

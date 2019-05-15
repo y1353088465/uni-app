@@ -60,6 +60,7 @@
 								complete: () => {}
 							});
 						} else {
+							alert(data.data.data.data)
 							uni.showToast({
 								title: data.data.data.data,
 								icon:false,

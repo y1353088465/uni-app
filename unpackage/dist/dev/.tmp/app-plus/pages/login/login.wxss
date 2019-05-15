@@ -24,9 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.login.data-v-37350e87 {
+.login.data-v-8f42ce68 {
   width: 100%;
   height: 100vh;
+  min-height: 1000rpx;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #2468ac), color-stop(50%, rgba(0, 0, 0, 0.8)), to(#789ac9));
   background: -o-linear-gradient(left top, #2468ac 10%, rgba(0, 0, 0, 0.8) 50%, #789ac9 100%);
   background: linear-gradient(left top, #2468ac 10%, rgba(0, 0, 0, 0.8) 50%, #789ac9 100%);
@@ -48,10 +49,10 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.login .user_name.data-v-37350e87::-webkit-input-placeholder {
+.login .user_name.data-v-8f42ce68::-webkit-input-placeholder {
     font-size: 26rpx;
 }
-.login .title.data-v-37350e87 {
+.login .title.data-v-8f42ce68 {
     font-size: 80rpx;
     -webkit-transform: translateY(150rpx) skew(-10deg);
         -ms-transform: translateY(150rpx) skew(-10deg);
@@ -63,7 +64,7 @@
         -ms-flex-negative: 0;
             flex-shrink: 0;
 }
-.login .login_box.data-v-37350e87 {
+.login .login_box.data-v-8f42ce68 {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -88,14 +89,14 @@
         -ms-flex-negative: 0;
             flex-shrink: 0;
 }
-.login .login_box .user_name.data-v-37350e87 {
+.login .login_box .user_name.data-v-8f42ce68 {
       border-bottom: 1px solid #01D867;
       width: 100%;
       height: 50rpx;
       text-align: center;
       color: #01D867;
 }
-.login .login_box .login_btn.data-v-37350e87 {
+.login .login_box .login_btn.data-v-8f42ce68 {
       text-align: center;
       width: 100%;
       height: 80rpx;
@@ -105,7 +106,7 @@
       border-radius: 50% 0;
       color: #01D867;
 }
-.login .login_box .tips.data-v-37350e87 {
+.login .login_box .tips.data-v-8f42ce68 {
       color: orangered;
       font-size: 26rpx;
       text-align: center;

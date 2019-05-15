@@ -1,1 +1,1 @@
-<template name="64ea5d6a"><view class="_view data-v-7752d94c wx_my">4</view></template>
+<template name="64ea5d6a"><view class="_view data-v-13badbd1 wx_my"><view class="_p data-v-13badbd1 user_name">{{userName}}</view><view class="_p data-v-13badbd1 out" bindtap="handleProxy" data-eventid="{{'64ea5d6a-0'}}" data-comkey="{{$k}}">退出登录</view></view></template>

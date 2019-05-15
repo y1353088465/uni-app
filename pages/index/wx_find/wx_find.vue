@@ -1,7 +1,7 @@
 <template>
 	<view class="wx_find">
 		<IndexHeader v-on:menu_status="menu_status" msg="发现"></IndexHeader>
-		<MenuList v-on:menu_hide="menu_hide" v-if="menu_list_status"></MenuList>
+		<MenuList v-on:menu_hide="menu_hide" v-on:pages_index="pages_index" v-if="menu_list_status"></MenuList>
 	</view>
 </template>
 
@@ -13,6 +13,7 @@
 		data() {
 			return {
 				menu_list_status: false,
+
 			};
 		},
 		components: {
@@ -28,8 +29,7 @@
 			//监听子元素事件传输值
 			menu_hide(value) {
 				this.menu_list_status = value;
-			}
-
+			},
 		}
 	}
 </script>

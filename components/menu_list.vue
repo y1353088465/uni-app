@@ -39,9 +39,26 @@
 				this.$emit("menu_hide", this.menu_components);
 			},
 			sao() {
+				let that = this;
 				uni.scanCode({
 					success: function(res) {
-						alert(JSON.stringify(res))
+						uni.setStorage({
+							key: 'sao_url',
+							data: res,
+							success: (res) => {
+								uni.navigateTo({
+									url: '/pages/webView/webView',
+									animationType: 'pop-in',
+									animationDuration: 400,
+									success: res => {},
+									fail: () => {},
+									complete: () => {}
+								});
+							},
+							error: (err) => {
+								console.log(err)
+							}
+						});
 					}
 				});
 			}
