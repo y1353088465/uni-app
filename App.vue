@@ -60,5 +60,19 @@
 	button {
 		outline: none;
 	}
+	.status_bar {
+			height: var(--status-bar-height)!important;
+			width: 100%!important;
+			background-color: #f1f5f9!important;
+			color:#fff!important;
+		}
 
+		.top_view {
+			height: var(--status-bar-height)!important;
+			width: 100%!important;
+			position: fixed!important;
+			background-color: #f1f5f9!important;
+			top: 0!important;
+			z-index: 99999!important;
+		}
 </style>
